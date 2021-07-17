@@ -20,8 +20,9 @@ def handler(event, context):
 
     chrome_options.binary_location = os.getcwd() + "/headless-chromium"    
     driver = webdriver.Chrome(os.getcwd() + "/chromedriver",chrome_options=chrome_options)
-    driver.get('https://en.wikipedia.org/wiki/Special:Random')
-    line = driver.find_element_by_class_name('firstHeading').text
-    print(line)
+    driver.get('https://youtu.be/75gEDmym9lg')
+    #line = driver.find_element_by_class_name('firstHeading').text
+    #print(line)
+    time.sleep(180)
     driver.quit()
     return line
